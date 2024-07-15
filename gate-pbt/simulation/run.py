@@ -233,9 +233,6 @@ def main():
     #tt = (t2-t1)/60
     #print("  -> Time to override external air = ", tt) 
     
-    
-    
-    #
     #structs_to_air = ["zbb", "zBB", "zbbs", "zBBs", "bb", "BB", "bbs", "BBs",
     #                  "zscarwire", "zscar_wire", "zScarWire", "zScar_Wire",
     #                  "z_Wire", "NS_Wire"]
@@ -247,10 +244,7 @@ def main():
     # TODO: Check for density overrides and apply
     #override_hu( image, structure_file, structure, hu )
   
-    ##### OVERRIDE FOR PSQA
-    #ct_air_override = overrides.override_hu( ct_air_override, struct_file, "BODY", 51 )
-    #ct_air_override = overrides.override_hu( ct_air_override, struct_file, "zMetal", 4998 )
-    
+
  
     
     # Crop image to structure
@@ -267,6 +261,12 @@ def main():
     ct_for_simulation = "ct_cropped.mhd"
     ct_sim_path = join(sim_dir,"data",ct_for_simulation)
     itk.imwrite(ct_cropped, ct_sim_path)
+    
+    
+    # Generate dose mask from zSurface for gamma analysis
+    dosemask = overrides.get_structure_mask( ct_cropped, struct_file, "zSurface" )
+    itk.imwrite( dosemask, join(sim_dir,"DoseMask.mhd") )
+    
     
     # Add number fractions to config
     nfractions = plandcm.FractionGroupSequence[0].NumberOfFractionsPlanned
