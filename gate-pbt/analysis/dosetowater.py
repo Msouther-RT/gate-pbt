@@ -13,6 +13,32 @@ import numpy as np
 
 
 
+def resample_nn( img, refimg ):
+    """ Resample image to same dimensions as reference using nearest neighbour interpolation """ 
+
+    spacing = refimg.GetSpacing()
+    origin = refimg.GetOrigin()
+    direction = refimg.GetDirection()
+    size = refimg.GetLargestPossibleRegion().GetSize()
+    
+    resampleFilter = itk.ResampleImageFilter.New(Input=img)
+    resampleFilter.SetInterpolator(itk.NearestNeighborInterpolateImageFunction.New(img))
+    resampleFilter.SetOutputSpacing(spacing)
+    resampleFilter.SetOutputOrigin(origin)
+    resampleFilter.SetOutputDirection(direction)
+    resampleFilter.SetSize(size)
+    
+    #Default interpolation is LinearInterpolateImageFunction<InputImageType, TInterpolatorPrecisionType>, 
+    #which is reasonable for ordinary medical images. However, some synthetic images have pixels 
+    #drawn from a finite prescribed set. An example would be a mask indicating the segmentation of a 
+    #brain into a small number of tissue types. For such an image, one does not want to interpolate between
+    #different pixel values, and so NearestNeighborInterpolateImageFunction< InputImageType, TCoordRep > would be a better choice.   
+
+    resampleFilter.Update()
+    return resampleFilter.GetOutput()
+
+
+
 def resample( img, refimg ):
     """ Resample image to same dimensions as reference """ 
 

@@ -65,8 +65,11 @@ def make_gate_dirs(dir_name, path_to_templates):
         
 
 
-def copy_dcm_doses( dcmfiles, destinationdir ):
+def copy_dcm_files( dcmfiles, destinationdir ):
     """Copy dcm dose files to simdir/data; needed later for analaysis"""
+    if isinstance( dcmfiles, str ):
+        dcmfiles = [dcmfiles]
+        
     for dcmfile in dcmfiles:
         fname = basename(dcmfile)
         dest = join(destinationdir, fname)
@@ -232,8 +235,11 @@ def main():
     ct_cropped = overrides.set_air_external( ct_cropped, struct_file )
     #itk.imwrite(ct_air_override, join(sim_dir,"data","ct_air.mhd"))
     
-   
-    #
+
+    #t2 = time.perf_counter();
+    #tt = (t2-t1)/60
+    #print("  -> Time to override external air = ", tt) 
+    
     #structs_to_air = ["zbb", "zBB", "zbbs", "zBBs", "bb", "BB", "bbs", "BBs",
     #                  "zscarwire", "zscar_wire", "zScarWire", "zScar_Wire",
     #                  "z_Wire", "NS_Wire"]
@@ -246,12 +252,27 @@ def main():
     #override_hu( image, structure_file, structure, hu )
   
 
+    # Crop image to structure
+    crop_to_contour = overrides.get_external_name( struct_file )
+    #
+    #!!!!!!
+    crop_to_contour="Dose0.1%"   #"D0.001%"  
+    #
+    print("Cropping img to", crop_to_contour)
+    ct_cropped = cropimage.crop_to_structure( ct_air_override, struct_file, crop_to_contour) #optional margin
+    itk.imwrite(ct_cropped, join(sim_dir,"data","ct_cropped.mhd"))
+
     
     # TODO: set automatically for different cropping / override options
     ct_for_simulation = "ct_cropped.mhd"
     ct_sim_path = join(sim_dir,"data",ct_for_simulation)
     itk.imwrite(ct_cropped, ct_sim_path)
     
+    
+
+    # Generate dose mask from zSurface for gamma analysis
+    dosemask = overrides.get_structure_mask( ct_cropped, struct_file, "zSurface" )
+    itk.imwrite( dosemask, join(sim_dir,"DoseMask.mhd") )
     
     
     # Add number fractions to config
@@ -264,7 +285,11 @@ def main():
       
     # Copy over dicom dose files to /data
     print("Copying dcm dose files over")
-    copy_dcm_doses( dose_files, join(sim_dir,"data") )   
+    copy_dcm_files( dose_files, join(sim_dir,"data") )
+    print("Copying dcm structure file over")
+    copy_dcm_files( struct_file, join(sim_dir,"data") )
+    #config.add_structure_to_config( configpath, struct_file )
+
       
     # Generate all files required for simulation
     print("Generating simulation files")

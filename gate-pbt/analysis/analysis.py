@@ -70,8 +70,14 @@ def count_prims_simulated( outputdir, field ):
 
 
 def write_scaled_dose( mhdfile, output, scalefactor):
-    """Scale provided dose image and save to output"""
-    img = itk.imread(mhdfile)
+    """Scale provided dose image/path and save to output"""   
+    img = None 
+    if type(mhdfile)==str:
+        #Assume we have file path
+        img = itk.imread( mhdfile )
+    else:
+        #Assume we have itk image object
+        img = mhdfile       
     dose = itk.array_from_image( img )
     dosescaled = dose * scalefactor
     newimg = itk.image_view_from_array( dosescaled )
@@ -96,7 +102,33 @@ def correct_transform_matrix( mergedfiles ):
                     out.write("TransformMatrix = {}\n".format(transform))
                 else:
                     out.write(line)
-                    
+
+
+def apply_mask(doseimage, mask):
+    """ Element-wise multiplication of dose image and structure mask 
+    
+    Accepts either file paths or ITK image objects as input
+    """
+    di = None 
+    if type(doseimage)==str:
+        di = itk.imread( doseimage )
+    else:
+        di = doseimage      
+    mi = None 
+    if type(mask)==str:
+        mi = itk.imread( mask )
+    else:
+        mi = mask      
+    
+    d = itk.array_view_from_image(di)     
+    m = itk.array_view_from_image(mi)
+    if( d.shape != m.shape ):
+        print( "apply mask: inconsistent shapes of mask and image"  )     
+    df = m*d
+    df_img = itk.image_view_from_array( df )
+    df_img.CopyInformation(di)
+    
+    return df_img                  
                     
 
 
@@ -114,8 +146,10 @@ def full_analysis( outputdir ):
     hu2mat_path = join(parentdir,"data",hu2matfile)
     emcalc_path = join(parentdir,"data",emcalc)
     
-
     ## check_integrity( outputdir )  #TODO
+    
+    # Read DoseMask to set dose outside zSurface to zero
+    dosemask = itk.imread(join(parentdir,"data","DoseMask.mhd"))  # TODO; read from config file
         
     #fieldnames = get_field_names( outputdir )
     fieldnames = config.get_beam_names( outputdir )
@@ -147,16 +181,24 @@ def full_analysis( outputdir ):
         
         dose = field+"_merged-Dose.mhd"
         if dose in [basename(f) for f in mergedfiles]:
-            print("  Scaling merged-Dose.mhd")
-            doseimg = join(outputdir, dose)
-            scaledimg = join(outputdir, field+"_AbsoluteDose.mhd")
-            write_scaled_dose( doseimg, scaledimg, scalefactor )
             
+            print("  Scaling merged-Dose.mhd")
+            doseimg_path = join(outputdir, dose)
+            
+            # Resample dosemask to dose grid resolution - Alternative is just to generate the mask here
+            dosemask = dosetowater.resample_nn( dosemask, itk.imread(doseimg_path)  )
+            itk.imwrite(dosemask, "resampled_dosemask.mhd")
+            # Apply mask to zSurface          
+            doseimg = apply_mask(doseimg_path, dosemask)  
+                     
+            scaledimg_path = join(outputdir, field+"_AbsoluteDose.mhd")
+            write_scaled_dose( doseimg, scaledimg_path, scalefactor )
+                      
             print("  Converting dose2material to dose2water")
             ctpath = config.get_ct_path( outputdir )
             ##ctpath = os.path.join( outputdir, ctname )
             d2wimg = join(outputdir, field+"_AbsoluteDoseToWater.mhd")
-            dosetowater.convert_dose_to_water( ctpath, scaledimg, emcalc_path, hu2mat_path, output=d2wimg )
+            dosetowater.convert_dose_to_water( ctpath, scaledimg_path, emcalc_path, hu2mat_path, output=d2wimg )
             
             print("  Converting mhd dose to dicom")
             beamref = config.get_beam_ref_no( outputdir, field )
@@ -165,46 +207,57 @@ def full_analysis( outputdir ):
             ##print("XXX ", path_to_dcmdose)
             dcm_out = join(outputdir, field+"_AbsoluteDoseToWater.dcm")
             mhdtodicom.mhd2dcm( d2wimg, path_to_dcmdose, dcm_out )
-        """              
-            print("  Performing gamma analysis")
-            tps_dose = dicomtomhd.dcm2mhd( path_to_dcmdose ) 
-            gamma_img = gamma.gamma_image(  d2wimg, tps_dose )
-            itk.imwrite(gamma_img, join(outputdir, field+"_Gamma.mhd") )
-            pass_rate = gamma.get_pass_rate( gamma_img )
-            print("    gamma pass rate = {}%".format( round(pass_rate,2) ))
-            #
+            
+            
+            ### Override dose outside of patient contour ###
+            # Means in Mephysto use panel A (targ) for Eclipse; B (ref) for MC dose
+            #print("  Overriding dose outside of body to zero for gamma analysis")
+            #struct_file = mhdtodicom.get_struct_file_path( outputdir )
+            #body = overrides.get_external_name( struct_file )
+            #dose_none_ext = overrides.set_external_dose_zero( d2wimg, struct_file, body )
+            #path_to_none_ext =  join(outputdir, field+"_DoseToWater_NoneExt.mhd" )  
+            #itk.imwrite(dose_none_ext, path_to_none_ext)      
+            #mhdtodicom.mhd2dcm(dose_none_ext, path_to_dcmdose, join(outputdir, field+"_DoseToWater_NoneExt.dcm") )
+   
+                      
+            #tps_dose = dicomtomhd.dcm2mhd( path_to_dcmdose )                 
+            #print("  Performing gamma analysis 3%/3mm: post-sim D2W vs Eclipse")
+            #gamma_img = gamma.gamma_image(  d2wimg, tps_dose, 3, 3 )
+            #itk.imwrite(gamma_img, join(outputdir, field+"_Gamma_33.mhd") )
+            #pass_rate = gamma.get_pass_rate( gamma_img )
+            #print("   *** Gamma pass rate @ 3%/3mm = {}%".format( round(pass_rate,2) ))
+            
+            #print("  Performing gamma analysis 2%/2mm: post-sim D2W vs Eclipse")
+            #gamma_img_22 = gamma.gamma_image(  d2wimg, tps_dose, 2, 2 )
+            #itk.imwrite(gamma_img_22, join(outputdir, field+"_Gamma_22.mhd") )
+            #pass_rate = gamma.get_pass_rate( gamma_img_22 )
+            #print("   *** Gamma pass rate @ 2%/2mm = {}%".format( round(pass_rate,2) ))
+            
             # Make dcm for gamnma image for visualizaiton
-            print("  Converting gamma image to dicom")
-            gamma_dcm = join(outputdir, field+"_Gamma.dcm")
-            mhdtodicom.mhd2dcm( gamma_img, path_to_dcmdose, gamma_dcm )
-        """
+            #print("  Converting gamma image to dicom")
+            #gamma_dcm = join(outputdir, field+"_Gamma.dcm")
+            #mhdtodicom.mhd2dcm( gamma_img, path_to_dcmdose, gamma_dcm )
+        
             
             
         dose2water = field+"_merged-DoseToWater.mhd"
         if dose2water in [basename(f) for f in mergedfiles]:
-            print("  Scaling merged-DoseToWater.mhd")
-            doseimg = join(outputdir, dose2water)
-            scaledimg = join(outputdir, field+"_Gate_DoseToWater.mhd")
-            write_scaled_dose( doseimg, scaledimg, scalefactor )
             
+            print("  Scaling merged-DoseToWater.mhd")
+            doseimg_path = join(outputdir, dose2water)
+            # Apply mask to zSurface          
+            doseimg = apply_mask(doseimg_path, dosemask)                       
+            scaledimg_path = join(outputdir, field+"_Gate_DoseToWater.mhd")
+            write_scaled_dose( doseimg, scaledimg_path, scalefactor )
+
             print("  Converting Gate dose-to-water to dicom")
             beamref = config.get_beam_ref_no( outputdir, field )
             path_to_dcmdose = mhdtodicom.get_dcm_file_path( outputdir, beamref )
             ##print("XXX ", path_to_dcmdose)
             dcm_out = join(outputdir, field+"_Gate_DoseToWater.dcm")
-            mhdtodicom.mhd2dcm( scaledimg, path_to_dcmdose, dcm_out )
+            mhdtodicom.mhd2dcm( scaledimg_path, path_to_dcmdose, dcm_out )
 
-            
-            
-            ### Override dose outside of patient contour ###
-            # Means in Mephysto use panel A (targ) for Eclipse; B (ref) for MC dose
-            #struct_file = r"P:\Protons\SteveCourt_P\__TRIALS__\NB_IMAT_06\dcm\RS.1.2.246.352.71.4.179454110911.10729.20220325132333.dcm"
-            #pt_contour = "External"
-            #dose_none_ext = overrides.set_external_dose_zero( scaledimg, struct_file, pt_contour )
-            ##itk.imwrite(dose_none_ext, join(outputdir, field+"_Gate_DoseToWater_NoneExt.mhd") )      
-            #mhdtodicom.mhd2dcm(dose_none_ext, path_to_dcmdose, join(outputdir, field+"_Gate_DoseToWater_NoneExt.dcm") )
-            #
-            #
+                
             #print("  Performing gamma analysis for GD2W")
             #tps_dose = dicomtomhd.dcm2mhd( path_to_dcmdose ) 
             #gamma_img_gd2w = gamma.gamma_image(   tps_dose , dose_none_ext )
@@ -217,8 +270,6 @@ def full_analysis( outputdir ):
             #gamma_dcm = join(outputdir, field+"_Gamma.dcm")
             #mhdtodicom.mhd2dcm( gamma_img, path_to_dcmdose, gamma_dcm )
      
-        
-        
         
         let = field+"_merged-LET.mhd"
         if let in [basename(f) for f in mergedfiles]:
