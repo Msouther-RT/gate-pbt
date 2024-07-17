@@ -119,8 +119,7 @@ def override_hu( image, structure_file, structure, hu ):   #MAYBE JUST PASS THE 
 
 
 def set_external_dose_zero( image, structure_file, structure ):
-    """Set all dose outside of patient's contour to zero 
-    """
+    """ Set all dose outside of patient's contour to zero """
     
     img = None 
     if type(image)==str:
