@@ -137,7 +137,7 @@ def full_analysis( outputdir ):
     """ 
     print("\nData directory: ",outputdir)
 
-    # Get absolute path to simulation data files  
+    # Get absolute path to simulation data files      ## HARD CODED FIX
     parentdir = dirname(outputdir)   
     #TODO: read this from config file
     hu2matfile = "PhilipsBody-HU2mat.txt"
@@ -147,9 +147,6 @@ def full_analysis( outputdir ):
     emcalc_path = join(parentdir,"data",emcalc)
     
     ## check_integrity( outputdir )  #TODO
-    
-    # Read DoseMask to set dose outside zSurface to zero
-    dosemask = itk.imread(join(parentdir,"data","DoseMask.mhd"))  # TODO; read from config file
         
     #fieldnames = get_field_names( outputdir )
     fieldnames = config.get_beam_names( outputdir )
@@ -159,7 +156,7 @@ def full_analysis( outputdir ):
     
     for field in fieldnames:
         
-        print("Analyzing field: ", field)
+        print("\nAnalyzing field: ", field)
 
         print("  Merging results...")
         mergedfiles = mergeresults.merge_results( outputdir, field )
@@ -179,12 +176,24 @@ def full_analysis( outputdir ):
         print("  Fractions planned: ",nfractions)
         
         
+        beamref = config.get_beam_ref_no( outputdir, field )
+        print("    beam_ref_no = ",beamref)
+
+        
+        path_to_dcmdose = mhdtodicom.get_dcm_file_path( outputdir, beamref )
+        tps_dose = dicomtomhd.dcm2mhd( path_to_dcmdose )        
+        print("  Overriding TPS outside of zSurface to zero for gamma analysis")
+        struct_file = mhdtodicom.get_struct_file_path( outputdir )
+        tps_dose = overrides.set_external_dose_zero( tps_dose, struct_file, "zSurface" )    ## hard-coded
+        
+        
         dose = field+"_merged-Dose.mhd"
         if dose in [basename(f) for f in mergedfiles]:
-            
+            print("\n")
             print("  Scaling merged-Dose.mhd")
-            doseimg_path = join(outputdir, dose)
-            
+            doseimg_path = join(outputdir, dose)       
+            # Read DoseMask to set dose outside zSurface to zero
+            dosemask = itk.imread(join(parentdir,"data","DoseMask.mhd"))  # TODO; read from config file
             # Resample dosemask to dose grid resolution - Alternative is just to generate the mask here
             dosemask = dosetowater.resample_nn( dosemask, itk.imread(doseimg_path)  )
             itk.imwrite(dosemask, "resampled_dosemask.mhd")
@@ -201,10 +210,6 @@ def full_analysis( outputdir ):
             dosetowater.convert_dose_to_water( ctpath, scaledimg_path, emcalc_path, hu2mat_path, output=d2wimg )
             
             print("  Converting mhd dose to dicom")
-            beamref = config.get_beam_ref_no( outputdir, field )
-            print("    beam_ref_no = ",beamref)
-            path_to_dcmdose = mhdtodicom.get_dcm_file_path( outputdir, beamref )
-            ##print("XXX ", path_to_dcmdose)
             dcm_out = join(outputdir, field+"_AbsoluteDoseToWater.dcm")
             mhdtodicom.mhd2dcm( d2wimg, path_to_dcmdose, dcm_out )
             
@@ -219,57 +224,56 @@ def full_analysis( outputdir ):
             #itk.imwrite(dose_none_ext, path_to_none_ext)      
             #mhdtodicom.mhd2dcm(dose_none_ext, path_to_dcmdose, join(outputdir, field+"_DoseToWater_NoneExt.dcm") )
    
-                      
-            #tps_dose = dicomtomhd.dcm2mhd( path_to_dcmdose )                 
-            #print("  Performing gamma analysis 3%/3mm: post-sim D2W vs Eclipse")
-            #gamma_img = gamma.gamma_image(  d2wimg, tps_dose, 3, 3 )
-            #itk.imwrite(gamma_img, join(outputdir, field+"_Gamma_33.mhd") )
-            #pass_rate = gamma.get_pass_rate( gamma_img )
-            #print("   *** Gamma pass rate @ 3%/3mm = {}%".format( round(pass_rate,2) ))
+               
+            print("  Performing gamma analysis 3%/3mm: post-sim D2W vs Eclipse")
+            gamma_img = gamma.gamma_image(  d2wimg, tps_dose, 3, 3 )
+            itk.imwrite(gamma_img, join(outputdir, field+"_Gamma_33.mhd") )
+            pass_rate = gamma.get_pass_rate( gamma_img )
+            print("   *** Gamma pass rate @ 3%/3mm = {}%".format( round(pass_rate,2) ))
             
-            #print("  Performing gamma analysis 2%/2mm: post-sim D2W vs Eclipse")
-            #gamma_img_22 = gamma.gamma_image(  d2wimg, tps_dose, 2, 2 )
-            #itk.imwrite(gamma_img_22, join(outputdir, field+"_Gamma_22.mhd") )
-            #pass_rate = gamma.get_pass_rate( gamma_img_22 )
-            #print("   *** Gamma pass rate @ 2%/2mm = {}%".format( round(pass_rate,2) ))
+            # Make dcm for gamma image for visualizaiton
+            print("  Converting gamma image to dicom")
+            gamma_dcm = join(outputdir, field+"_Gamma_33.dcm")
+            mhdtodicom.mhd2dcm( gamma_img, path_to_dcmdose, gamma_dcm )
             
-            # Make dcm for gamnma image for visualizaiton
-            #print("  Converting gamma image to dicom")
-            #gamma_dcm = join(outputdir, field+"_Gamma.dcm")
-            #mhdtodicom.mhd2dcm( gamma_img, path_to_dcmdose, gamma_dcm )
+            
+            print("  Performing gamma analysis 2%/2mm: post-sim D2W vs Eclipse")
+            gamma_img_22 = gamma.gamma_image(  d2wimg, tps_dose, 2, 2 )
+            itk.imwrite(gamma_img_22, join(outputdir, field+"_Gamma_22.mhd") )
+            pass_rate = gamma.get_pass_rate( gamma_img_22 )
+            print("   *** Gamma pass rate @ 2%/2mm = {}%".format( round(pass_rate,2) ))
+            
+
         
-            
-            
         dose2water = field+"_merged-DoseToWater.mhd"
         if dose2water in [basename(f) for f in mergedfiles]:
-            
+            print("\n")
             print("  Scaling merged-DoseToWater.mhd")
             doseimg_path = join(outputdir, dose2water)
-            # Apply mask to zSurface          
+            
+            # Read DoseMask to set dose outside zSurface to zero
+            dosemask = itk.imread(join(parentdir,"data","DoseMask.mhd"))  # TODO; read from config file
+            # Resample dosemask to dose grid resolution - Alternative is just to generate the mask here
+            dosemask = dosetowater.resample_nn( dosemask, itk.imread(doseimg_path)  )
+            
+            # Apply zSurface mask to dose          
             doseimg = apply_mask(doseimg_path, dosemask)                       
             scaledimg_path = join(outputdir, field+"_Gate_DoseToWater.mhd")
             write_scaled_dose( doseimg, scaledimg_path, scalefactor )
 
             print("  Converting Gate dose-to-water to dicom")
-            beamref = config.get_beam_ref_no( outputdir, field )
-            path_to_dcmdose = mhdtodicom.get_dcm_file_path( outputdir, beamref )
-            ##print("XXX ", path_to_dcmdose)
             dcm_out = join(outputdir, field+"_Gate_DoseToWater.dcm")
             mhdtodicom.mhd2dcm( scaledimg_path, path_to_dcmdose, dcm_out )
+            
+            print("  Performing gamma analysis for GD2W; 3%/3mm")
+            gamma_img = gamma.gamma_image(  scaledimg_path, tps_dose, 3, 3 )                   #### NEED SCALED IMAGE HERE
+            itk.imwrite(gamma_img, join(outputdir, field+"_Gamma_GD2W_33.mhd") )
+            pass_rate = gamma.get_pass_rate( gamma_img )
+            print("   *** Gamma GD2W pass rate @ 3%/3mm = {}%".format( round(pass_rate,2) ))          
+            print("  Converting gamma image to dicom")
+            gamma_dcm = join(outputdir, field+"_Gamma_GD2W_33.dcm")
 
-                
-            #print("  Performing gamma analysis for GD2W")
-            #tps_dose = dicomtomhd.dcm2mhd( path_to_dcmdose ) 
-            #gamma_img_gd2w = gamma.gamma_image(   tps_dose , dose_none_ext )
-            ##itk.imwrite(gamma_img, join(outputdir, field+"_Gamma_NoneExt.mhd") )
-            #pass_rate = gamma.get_pass_rate( gamma_img_gd2w )
-            #print("    XXXXXXXXX gamma pass rate = {}%".format( round(pass_rate,2) ))
-            #
-            # Make dcm for gamnma image for visualizaiton
-            #print("  Converting gamma image to dicom")
-            #gamma_dcm = join(outputdir, field+"_Gamma.dcm")
-            #mhdtodicom.mhd2dcm( gamma_img, path_to_dcmdose, gamma_dcm )
-     
+
         
         let = field+"_merged-LET.mhd"
         if let in [basename(f) for f in mergedfiles]:

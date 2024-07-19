@@ -249,7 +249,7 @@ def main():
     
     
 
-    # Generate dose mask from zSurface for gamma analysis
+    print("Generate dose mask from zSurface for gamma analysis")
     dosemask = overrides.get_structure_mask( ct_cropped, struct_file, "zSurface" )
     itk.imwrite( dosemask, join(sim_dir,"data","DoseMask.mhd") )
     

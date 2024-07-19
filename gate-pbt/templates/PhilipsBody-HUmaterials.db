@@ -2353,7 +2353,7 @@ Femurcylindricalshaft_195: d=1.8919 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.202
 
-# Material corresponding to H=[ 1534;1546.98 ]
+# Material corresponding to H=[ 1534;1551.46 ]
 Corticalbone_196: d=1.8985 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2365,7 +2365,7 @@ Corticalbone_196: d=1.8985 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1546.98;1559.96 ]
+# Material corresponding to H=[ 1551.46;1568.91 ]
 Corticalbone_197: d=1.9085 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2377,7 +2377,7 @@ Corticalbone_197: d=1.9085 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1559.96;1572.95 ]
+# Material corresponding to H=[ 1568.91;1586.37 ]
 Corticalbone_198: d=1.9185 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2389,7 +2389,7 @@ Corticalbone_198: d=1.9185 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1572.95;1585.93 ]
+# Material corresponding to H=[ 1586.37;1603.82 ]
 Corticalbone_199: d=1.9285 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2401,7 +2401,7 @@ Corticalbone_199: d=1.9285 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1585.93;1598.91 ]
+# Material corresponding to H=[ 1603.82;1621.28 ]
 Corticalbone_200: d=1.9385 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2413,7 +2413,7 @@ Corticalbone_200: d=1.9385 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1598.91;1611.89 ]
+# Material corresponding to H=[ 1621.28;1638.73 ]
 Corticalbone_201: d=1.9485 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2425,7 +2425,7 @@ Corticalbone_201: d=1.9485 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1611.89;1624.88 ]
+# Material corresponding to H=[ 1638.73;1656.19 ]
 Corticalbone_202: d=1.9585 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2437,7 +2437,7 @@ Corticalbone_202: d=1.9585 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1624.88;1637.86 ]
+# Material corresponding to H=[ 1656.19;1673.64 ]
 Corticalbone_203: d=1.9685 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2449,7 +2449,7 @@ Corticalbone_203: d=1.9685 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1637.86;1650.84 ]
+# Material corresponding to H=[ 1673.64;1691.1 ]
 Corticalbone_204: d=1.9785 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2461,7 +2461,7 @@ Corticalbone_204: d=1.9785 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1650.84;1663.82 ]
+# Material corresponding to H=[ 1691.1;1708.55 ]
 Corticalbone_205: d=1.9885 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2473,7 +2473,7 @@ Corticalbone_205: d=1.9885 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1663.82;1676.8 ]
+# Material corresponding to H=[ 1708.55;1726.01 ]
 Corticalbone_206: d=1.9985 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2485,7 +2485,7 @@ Corticalbone_206: d=1.9985 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1676.8;1689.79 ]
+# Material corresponding to H=[ 1726.01;1743.47 ]
 Corticalbone_207: d=2.0085 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2497,7 +2497,7 @@ Corticalbone_207: d=2.0085 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1689.79;1702.77 ]
+# Material corresponding to H=[ 1743.47;1760.92 ]
 Corticalbone_208: d=2.0185 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2509,7 +2509,7 @@ Corticalbone_208: d=2.0185 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1702.77;1715.75 ]
+# Material corresponding to H=[ 1760.92;1778.38 ]
 Corticalbone_209: d=2.0285 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2521,7 +2521,7 @@ Corticalbone_209: d=2.0285 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1715.75;1728.73 ]
+# Material corresponding to H=[ 1778.38;1795.83 ]
 Corticalbone_210: d=2.0385 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2533,7 +2533,7 @@ Corticalbone_210: d=2.0385 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1728.73;1741.72 ]
+# Material corresponding to H=[ 1795.83;1813.29 ]
 Corticalbone_211: d=2.0485 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2545,7 +2545,7 @@ Corticalbone_211: d=2.0485 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1741.72;1754.7 ]
+# Material corresponding to H=[ 1813.29;1830.74 ]
 Corticalbone_212: d=2.0585 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2557,7 +2557,7 @@ Corticalbone_212: d=2.0585 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1754.7;1767.68 ]
+# Material corresponding to H=[ 1830.74;1848.2 ]
 Corticalbone_213: d=2.0685 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2569,7 +2569,7 @@ Corticalbone_213: d=2.0685 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1767.68;1780.66 ]
+# Material corresponding to H=[ 1848.2;1865.65 ]
 Corticalbone_214: d=2.0785 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2581,7 +2581,7 @@ Corticalbone_214: d=2.0785 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1780.66;1793.64 ]
+# Material corresponding to H=[ 1865.65;1883.11 ]
 Corticalbone_215: d=2.0885 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2593,7 +2593,7 @@ Corticalbone_215: d=2.0885 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1793.64;1806.63 ]
+# Material corresponding to H=[ 1883.11;1900.56 ]
 Corticalbone_216: d=2.0985 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2605,7 +2605,7 @@ Corticalbone_216: d=2.0985 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1806.63;1819.61 ]
+# Material corresponding to H=[ 1900.56;1918.02 ]
 Corticalbone_217: d=2.1085 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2617,7 +2617,7 @@ Corticalbone_217: d=2.1085 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1819.61;1832.59 ]
+# Material corresponding to H=[ 1918.02;1935.48 ]
 Corticalbone_218: d=2.1185 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2629,7 +2629,7 @@ Corticalbone_218: d=2.1185 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1832.59;1845.57 ]
+# Material corresponding to H=[ 1935.48;1952.93 ]
 Corticalbone_219: d=2.1285 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2641,7 +2641,7 @@ Corticalbone_219: d=2.1285 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1845.57;1858.55 ]
+# Material corresponding to H=[ 1952.93;1970.39 ]
 Corticalbone_220: d=2.1385 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2653,7 +2653,7 @@ Corticalbone_220: d=2.1385 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1858.55;1871.54 ]
+# Material corresponding to H=[ 1970.39;1987.84 ]
 Corticalbone_221: d=2.1485 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2665,7 +2665,7 @@ Corticalbone_221: d=2.1485 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1871.54;1884.52 ]
+# Material corresponding to H=[ 1987.84;2005.3 ]
 Corticalbone_222: d=2.1585 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2677,7 +2677,7 @@ Corticalbone_222: d=2.1585 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1884.52;1897.5 ]
+# Material corresponding to H=[ 2005.3;2022.75 ]
 Corticalbone_223: d=2.1685 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2689,7 +2689,7 @@ Corticalbone_223: d=2.1685 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1897.5;1910.48 ]
+# Material corresponding to H=[ 2022.75;2040.21 ]
 Corticalbone_224: d=2.1785 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2701,7 +2701,7 @@ Corticalbone_224: d=2.1785 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1910.48;1923.47 ]
+# Material corresponding to H=[ 2040.21;2057.66 ]
 Corticalbone_225: d=2.1885 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2713,7 +2713,7 @@ Corticalbone_225: d=2.1885 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1923.47;1936.45 ]
+# Material corresponding to H=[ 2057.66;2075.12 ]
 Corticalbone_226: d=2.1985 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2725,7 +2725,7 @@ Corticalbone_226: d=2.1985 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1936.45;1949.43 ]
+# Material corresponding to H=[ 2075.12;2092.57 ]
 Corticalbone_227: d=2.2085 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2737,7 +2737,7 @@ Corticalbone_227: d=2.2085 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1949.43;1962.41 ]
+# Material corresponding to H=[ 2092.57;2110.03 ]
 Corticalbone_228: d=2.2185 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2749,7 +2749,7 @@ Corticalbone_228: d=2.2185 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1962.41;1975.39 ]
+# Material corresponding to H=[ 2110.03;2127.49 ]
 Corticalbone_229: d=2.2285 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2761,7 +2761,7 @@ Corticalbone_229: d=2.2285 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1975.39;1988.38 ]
+# Material corresponding to H=[ 2127.49;2144.94 ]
 Corticalbone_230: d=2.2385 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2773,7 +2773,7 @@ Corticalbone_230: d=2.2385 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 1988.38;2001.36 ]
+# Material corresponding to H=[ 2144.94;2162.4 ]
 Corticalbone_231: d=2.2485 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2785,7 +2785,7 @@ Corticalbone_231: d=2.2485 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2001.36;2014.34 ]
+# Material corresponding to H=[ 2162.4;2179.85 ]
 Corticalbone_232: d=2.2585 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2797,7 +2797,7 @@ Corticalbone_232: d=2.2585 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2014.34;2027.32 ]
+# Material corresponding to H=[ 2179.85;2197.31 ]
 Corticalbone_233: d=2.2685 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2809,7 +2809,7 @@ Corticalbone_233: d=2.2685 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2027.32;2040.31 ]
+# Material corresponding to H=[ 2197.31;2214.76 ]
 Corticalbone_234: d=2.2785 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2821,7 +2821,7 @@ Corticalbone_234: d=2.2785 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2040.31;2053.29 ]
+# Material corresponding to H=[ 2214.76;2232.22 ]
 Corticalbone_235: d=2.2885 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2833,7 +2833,7 @@ Corticalbone_235: d=2.2885 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2053.29;2066.27 ]
+# Material corresponding to H=[ 2232.22;2249.67 ]
 Corticalbone_236: d=2.2985 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2845,7 +2845,7 @@ Corticalbone_236: d=2.2985 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2066.27;2079.25 ]
+# Material corresponding to H=[ 2249.67;2267.13 ]
 Corticalbone_237: d=2.3085 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2857,7 +2857,7 @@ Corticalbone_237: d=2.3085 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2079.25;2092.23 ]
+# Material corresponding to H=[ 2267.13;2284.58 ]
 Corticalbone_238: d=2.3185 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2869,7 +2869,7 @@ Corticalbone_238: d=2.3185 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2092.23;2105.22 ]
+# Material corresponding to H=[ 2284.58;2302.04 ]
 Corticalbone_239: d=2.3285 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2881,7 +2881,7 @@ Corticalbone_239: d=2.3285 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2105.22;2118.2 ]
+# Material corresponding to H=[ 2302.04;2319.5 ]
 Corticalbone_240: d=2.3385 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2893,7 +2893,7 @@ Corticalbone_240: d=2.3385 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2118.2;2131.18 ]
+# Material corresponding to H=[ 2319.5;2336.95 ]
 Corticalbone_241: d=2.3485 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2905,7 +2905,7 @@ Corticalbone_241: d=2.3485 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2131.18;2144.16 ]
+# Material corresponding to H=[ 2336.95;2354.41 ]
 Corticalbone_242: d=2.3585 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2917,7 +2917,7 @@ Corticalbone_242: d=2.3585 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2144.16;2157.15 ]
+# Material corresponding to H=[ 2354.41;2371.86 ]
 Corticalbone_243: d=2.3685 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2929,7 +2929,7 @@ Corticalbone_243: d=2.3685 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2157.15;2170.13 ]
+# Material corresponding to H=[ 2371.86;2389.32 ]
 Corticalbone_244: d=2.3785 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2941,7 +2941,7 @@ Corticalbone_244: d=2.3785 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2170.13;2183.11 ]
+# Material corresponding to H=[ 2389.32;2406.77 ]
 Corticalbone_245: d=2.3885 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2953,7 +2953,7 @@ Corticalbone_245: d=2.3885 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2183.11;2196.09 ]
+# Material corresponding to H=[ 2406.77;2424.23 ]
 Corticalbone_246: d=2.3985 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2965,7 +2965,7 @@ Corticalbone_246: d=2.3985 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2196.09;2209.07 ]
+# Material corresponding to H=[ 2424.23;2441.68 ]
 Corticalbone_247: d=2.4085 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2977,7 +2977,7 @@ Corticalbone_247: d=2.4085 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2209.07;2222.06 ]
+# Material corresponding to H=[ 2441.68;2459.14 ]
 Corticalbone_248: d=2.4185 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -2989,7 +2989,7 @@ Corticalbone_248: d=2.4185 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2222.06;2235.04 ]
+# Material corresponding to H=[ 2459.14;2476.59 ]
 Corticalbone_249: d=2.4285 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3001,7 +3001,7 @@ Corticalbone_249: d=2.4285 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2235.04;2248.02 ]
+# Material corresponding to H=[ 2476.59;2494.05 ]
 Corticalbone_250: d=2.4385 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3013,7 +3013,7 @@ Corticalbone_250: d=2.4385 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2248.02;2261 ]
+# Material corresponding to H=[ 2494.05;2511.51 ]
 Corticalbone_251: d=2.4485 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3025,7 +3025,7 @@ Corticalbone_251: d=2.4485 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2261;2273.98 ]
+# Material corresponding to H=[ 2511.51;2528.96 ]
 Corticalbone_252: d=2.4585 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3037,7 +3037,7 @@ Corticalbone_252: d=2.4585 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2273.98;2286.97 ]
+# Material corresponding to H=[ 2528.96;2546.42 ]
 Corticalbone_253: d=2.4685 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3049,7 +3049,7 @@ Corticalbone_253: d=2.4685 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2286.97;2299.95 ]
+# Material corresponding to H=[ 2546.42;2563.87 ]
 Corticalbone_254: d=2.4785 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3061,7 +3061,7 @@ Corticalbone_254: d=2.4785 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2299.95;2312.93 ]
+# Material corresponding to H=[ 2563.87;2581.33 ]
 Corticalbone_255: d=2.4885 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3073,7 +3073,7 @@ Corticalbone_255: d=2.4885 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2312.93;2325.91 ]
+# Material corresponding to H=[ 2581.33;2598.78 ]
 Corticalbone_256: d=2.4985 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3085,7 +3085,7 @@ Corticalbone_256: d=2.4985 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2325.91;2338.9 ]
+# Material corresponding to H=[ 2598.78;2616.24 ]
 Corticalbone_257: d=2.5085 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3097,7 +3097,7 @@ Corticalbone_257: d=2.5085 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2338.9;2351.88 ]
+# Material corresponding to H=[ 2616.24;2633.69 ]
 Corticalbone_258: d=2.5185 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3109,7 +3109,7 @@ Corticalbone_258: d=2.5185 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2351.88;2364.86 ]
+# Material corresponding to H=[ 2633.69;2651.15 ]
 Corticalbone_259: d=2.5285 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3121,7 +3121,7 @@ Corticalbone_259: d=2.5285 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2364.86;2377.84 ]
+# Material corresponding to H=[ 2651.15;2668.6 ]
 Corticalbone_260: d=2.5385 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3133,7 +3133,7 @@ Corticalbone_260: d=2.5385 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2377.84;2390.82 ]
+# Material corresponding to H=[ 2668.6;2686.06 ]
 Corticalbone_261: d=2.5485 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3145,7 +3145,7 @@ Corticalbone_261: d=2.5485 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2390.82;2403.81 ]
+# Material corresponding to H=[ 2686.06;2703.52 ]
 Corticalbone_262: d=2.5585 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3157,7 +3157,7 @@ Corticalbone_262: d=2.5585 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2403.81;2416.79 ]
+# Material corresponding to H=[ 2703.52;2720.97 ]
 Corticalbone_263: d=2.5685 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3169,7 +3169,7 @@ Corticalbone_263: d=2.5685 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2416.79;2429.77 ]
+# Material corresponding to H=[ 2720.97;2738.43 ]
 Corticalbone_264: d=2.5785 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3181,7 +3181,7 @@ Corticalbone_264: d=2.5785 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2429.77;2442.75 ]
+# Material corresponding to H=[ 2738.43;2755.88 ]
 Corticalbone_265: d=2.5885 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3193,7 +3193,7 @@ Corticalbone_265: d=2.5885 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2442.75;2455.74 ]
+# Material corresponding to H=[ 2755.88;2773.34 ]
 Corticalbone_266: d=2.5985 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3205,7 +3205,7 @@ Corticalbone_266: d=2.5985 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2455.74;2468.72 ]
+# Material corresponding to H=[ 2773.34;2790.79 ]
 Corticalbone_267: d=2.6085 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3217,7 +3217,7 @@ Corticalbone_267: d=2.6085 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2468.72;2481.7 ]
+# Material corresponding to H=[ 2790.79;2808.25 ]
 Corticalbone_268: d=2.6185 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3229,7 +3229,7 @@ Corticalbone_268: d=2.6185 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2481.7;2494.68 ]
+# Material corresponding to H=[ 2808.25;2825.7 ]
 Corticalbone_269: d=2.6285 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3241,7 +3241,7 @@ Corticalbone_269: d=2.6285 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2494.68;2507.66 ]
+# Material corresponding to H=[ 2825.7;2843.16 ]
 Corticalbone_270: d=2.6385 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3253,7 +3253,7 @@ Corticalbone_270: d=2.6385 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2507.66;2520.65 ]
+# Material corresponding to H=[ 2843.16;2860.61 ]
 Corticalbone_271: d=2.6485 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3265,7 +3265,7 @@ Corticalbone_271: d=2.6485 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2520.65;2533.63 ]
+# Material corresponding to H=[ 2860.61;2878.07 ]
 Corticalbone_272: d=2.6585 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3277,7 +3277,7 @@ Corticalbone_272: d=2.6585 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2533.63;2546.61 ]
+# Material corresponding to H=[ 2878.07;2895.53 ]
 Corticalbone_273: d=2.6685 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3289,7 +3289,7 @@ Corticalbone_273: d=2.6685 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2546.61;2559.59 ]
+# Material corresponding to H=[ 2895.53;2912.98 ]
 Corticalbone_274: d=2.6785 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3301,7 +3301,7 @@ Corticalbone_274: d=2.6785 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2559.59;2572.58 ]
+# Material corresponding to H=[ 2912.98;2930.44 ]
 Corticalbone_275: d=2.6885 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3313,7 +3313,7 @@ Corticalbone_275: d=2.6885 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2572.58;2585.56 ]
+# Material corresponding to H=[ 2930.44;2947.89 ]
 Corticalbone_276: d=2.6985 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3325,7 +3325,7 @@ Corticalbone_276: d=2.6985 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2585.56;2598.54 ]
+# Material corresponding to H=[ 2947.89;2965.35 ]
 Corticalbone_277: d=2.7085 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3337,7 +3337,7 @@ Corticalbone_277: d=2.7085 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2598.54;2611.52 ]
+# Material corresponding to H=[ 2965.35;2982.8 ]
 Corticalbone_278: d=2.7185 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3349,7 +3349,7 @@ Corticalbone_278: d=2.7185 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2611.52;2624.5 ]
+# Material corresponding to H=[ 2982.8;3000.26 ]
 Corticalbone_279: d=2.7285 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3361,7 +3361,7 @@ Corticalbone_279: d=2.7285 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2624.5;2637.49 ]
+# Material corresponding to H=[ 3000.26;3017.71 ]
 Corticalbone_280: d=2.7385 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3373,7 +3373,7 @@ Corticalbone_280: d=2.7385 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2637.49;2650.47 ]
+# Material corresponding to H=[ 3017.71;3035.17 ]
 Corticalbone_281: d=2.7485 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3385,7 +3385,7 @@ Corticalbone_281: d=2.7485 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2650.47;2663.45 ]
+# Material corresponding to H=[ 3035.17;3052.62 ]
 Corticalbone_282: d=2.7585 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3397,7 +3397,7 @@ Corticalbone_282: d=2.7585 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2663.45;2676.43 ]
+# Material corresponding to H=[ 3052.62;3070.08 ]
 Corticalbone_283: d=2.7685 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
@@ -3409,368 +3409,8 @@ Corticalbone_283: d=2.7685 g/cm3 ; n=9;
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
 
-# Material corresponding to H=[ 2676.43;2689.41 ]
-Corticalbone_284: d=2.7785 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2689.41;2702.4 ]
-Corticalbone_285: d=2.7885 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2702.4;2715.38 ]
-Corticalbone_286: d=2.7985 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2715.38;2728.36 ]
-Corticalbone_287: d=2.8085 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2728.36;2741.34 ]
-Corticalbone_288: d=2.8185 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2741.34;2754.33 ]
-Corticalbone_289: d=2.8285 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2754.33;2767.31 ]
-Corticalbone_290: d=2.8385 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2767.31;2780.29 ]
-Corticalbone_291: d=2.8485 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2780.29;2793.27 ]
-Corticalbone_292: d=2.8585 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2793.27;2806.25 ]
-Corticalbone_293: d=2.8685 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2806.25;2819.24 ]
-Corticalbone_294: d=2.8785 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2819.24;2832.22 ]
-Corticalbone_295: d=2.8885 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2832.22;2845.2 ]
-Corticalbone_296: d=2.8985 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2845.2;2858.18 ]
-Corticalbone_297: d=2.9085 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2858.18;2871.17 ]
-Corticalbone_298: d=2.9185 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2871.17;2884.15 ]
-Corticalbone_299: d=2.9285 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2884.15;2897.13 ]
-Corticalbone_300: d=2.9385 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2897.13;2910.11 ]
-Corticalbone_301: d=2.9485 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2910.11;2923.09 ]
-Corticalbone_302: d=2.9585 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2923.09;2936.08 ]
-Corticalbone_303: d=2.9685 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2936.08;2949.06 ]
-Corticalbone_304: d=2.9785 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2949.06;2962.04 ]
-Corticalbone_305: d=2.9885 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2962.04;2975.02 ]
-Corticalbone_306: d=2.9985 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2975.02;2988.01 ]
-Corticalbone_307: d=3.0085 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 2988.01;3000.99 ]
-Corticalbone_308: d=3.0185 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 3000.99;3013.97 ]
-Corticalbone_309: d=3.0285 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 3013.97;3026.95 ]
-Corticalbone_310: d=3.0385 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 3026.95;3039.93 ]
-Corticalbone_311: d=3.0485 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 3039.93;3052.92 ]
-Corticalbone_312: d=3.0585 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 3052.92;3065.9 ]
-Corticalbone_313: d=3.0685 g/cm3 ; n=9; 
-+el: name=Hydrogen; f=0.034
-+el: name=Carbon; f=0.155
-+el: name=Nitrogen; f=0.042
-+el: name=Oxygen; f=0.435
-+el: name=Sodium; f=0.001
-+el: name=Magnesium; f=0.002
-+el: name=Phosphor; f=0.103
-+el: name=Sulfur; f=0.003
-+el: name=Calcium; f=0.225
-
-# Material corresponding to H=[ 3065.9;3072 ]
-Corticalbone_314: d=3.07585 g/cm3 ; n=9; 
+# Material corresponding to H=[ 3070.08;3072 ]
+Corticalbone_284: d=2.77405 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
 +el: name=Nitrogen; f=0.042
@@ -3782,7 +3422,7 @@ Corticalbone_314: d=3.07585 g/cm3 ; n=9;
 +el: name=Calcium; f=0.225
 
 # Material corresponding to H=[ 3072;3073 ]
-Corticalbone_315: d=3.0782 g/cm3 ; n=9; 
+Corticalbone_285: d=2.7746 g/cm3 ; n=9; 
 +el: name=Hydrogen; f=0.034
 +el: name=Carbon; f=0.155
 +el: name=Nitrogen; f=0.042
@@ -3792,4 +3432,3 @@ Corticalbone_315: d=3.0782 g/cm3 ; n=9;
 +el: name=Phosphor; f=0.103
 +el: name=Sulfur; f=0.003
 +el: name=Calcium; f=0.225
-
