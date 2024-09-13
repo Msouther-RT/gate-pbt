@@ -74,7 +74,7 @@ def get_d2w_factors_from_emcalc(emcalcpath):
         if "G4_WATER" in line:
             cols = line.split()
             msp_water = float(cols[7])
-            print("    msp_water = ",msp_water)
+            #print("    msp_water = ",msp_water)
       
     # Form dictionary of RSPs
     d2w_factors = {}
@@ -85,8 +85,8 @@ def get_d2w_factors_from_emcalc(emcalcpath):
             material = cols[0]
             d2w_factor = float(cols[7])  / msp_water
             d2w_factors[material] = d2w_factor
-            rsp = d2w_factor * float(cols[1])
-            print("    material={}; rsp={}; dens={}".format(material,round(rsp,3),cols[1]  )  )
+            #rsp = d2w_factor * float(cols[1])
+            #print("    material={}; rsp={}; dens={}".format(material,round(rsp,3),cols[1]  )  )
         if "worldDefaultAir" in line:
             start_reading = True
     
