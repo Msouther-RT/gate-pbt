@@ -222,7 +222,7 @@ def main():
     #itk.imwrite(ct_reor,join(sim_dir, "data", "ct_orig_reorientate.mhd"))   
     
     # Crop image to structure
-    crop_to_contour="Dose0.1%"   
+    crop_to_contour="Dose 0.1[%]"   
     print("Cropping img to", crop_to_contour)
     ct_cropped = cropimage.crop_to_structure( ct_reor, struct_file, crop_to_contour) #optional margin
   
