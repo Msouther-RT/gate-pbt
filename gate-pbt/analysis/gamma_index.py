@@ -67,10 +67,10 @@ def gamma_index_3d(imgref,imgtarget,dta=3.,dd=3.,ddpercent=True,threshold=0.,def
     atarget = itk.array_view_from_image(imgtarget).swapaxes(0,2)
 
     if ddpercent:
-        #dd *= 0.01*np.max(atarget)   # Our TPS dose
-        dd *= 0.01*np.max(aref)
+        dd *= 0.01*np.max(atarget)   # Our TPS dose
+        ##dd *= 0.01*np.max(aref)
 
-    print("    dd (Gy) = ",dd)
+    print("   Abs dd (Gy) for global gamma = ",dd)
 
     # test consistency: both must be 3D
     # it would be cool to make this for 2D as well (and D>3), but not now

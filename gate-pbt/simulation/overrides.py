@@ -18,6 +18,24 @@ HU_AIR = -1000
 ########################
 
 
+def get_structure_mask( image, structure_file, struct ):
+    """ Return mhd mask of specified structure """
+    
+    img = None 
+    if type(image)==str:
+        #Assume we have file path
+        img = itk.imread( image )
+    else:
+        #Assume we have itk image object
+        img = image   
+        
+    ds = pydicom.dcmread( structure_file )   
+      
+    # get_mask() doesn't work for HFP setup; need to reorientate
+    aroi = roiutils.region_of_interest(ds,struct)
+    mask = aroi.get_mask(img, corrected=False)
+       
+    return mask    
     
 
 def get_external_name( structure_file ):
